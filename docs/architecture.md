@@ -2,6 +2,8 @@
 
 This document gives technical readers a concise map of the ArtsPass backend: how the API layer, persistence layer, and CRM adapter system fit together. It is written for engineers who want to understand the system at a glance before diving into specific subsystems.
 
+This document describes the system as designed. For what is currently live, stubbed, or in progress, see the [Current status](../README.md#current-status) section of the README.
+
 ## Overview diagram
 
 ```mermaid

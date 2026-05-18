@@ -174,7 +174,7 @@ Follow the pattern in `tests/test_adapters.py`:
 - **Verify unimplemented methods raise `NotImplementedError`** before the full implementation lands.
 - **Test registry wiring** — `get_adapter("ticketmaster")` should return a `TicketmasterAdapter`.
 
-Live integration tests (against the real CRM API) run separately and manually, following the `test_authenticated()` pattern in `spektrix_client.py`.
+Live integration tests run against the real CRM API separately and manually, kept out of the standard test suite. This is how the Spektrix integration was validated against 104 live events before the read path was declared production-ready.
 
 ## Current state
 
@@ -198,7 +198,7 @@ The Tessitura adapter is structurally complete: the class exists, is registered,
 
 ## Extensibility implications
 
-Each new CRM adds one module and one registry entry — nothing else changes. We have seven Seattle-area partner venues across three CRM systems today. As we expand to additional Pacific Northwest venues and nationally, each new CRM system is additive, not disruptive: existing integrations are untouched, and the new adapter follows the same sequence described in this walkthrough. The pattern also applies directly to broader live entertainment platforms — the same interface that works for a regional theater CRM works for any ticketing system that can return a list of events and a seat count.
+Each new CRM adds one module and one registry entry — nothing else changes. We have seven Seattle-area partner venues across two known CRM systems today, with two venues pending CRM identification. As we expand to additional Pacific Northwest venues and nationally, each new CRM system is additive, not disruptive: existing integrations are untouched, and the new adapter follows the same sequence described in this walkthrough. The pattern also applies directly to broader live entertainment platforms — the same interface that works for a regional theater CRM works for any ticketing system that can return a list of events and a seat count.
 
 ## Related docs
 

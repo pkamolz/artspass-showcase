@@ -37,7 +37,7 @@ FastAPI routes
 
 ### Live
 - **Spektrix integration** — Full HMAC-SHA1-signed HTTP client against the Spektrix API v3. Validated against 104 live events at Village Theatre (Issaquah). Events, instances, and seat availability map cleanly to our domain models.
-- **ORM and migration layer** — Four tables (`venues`, `performances`, `seat_availability`, `reservations`) with indexes, FK cascades, and JSONB columns for price tiers and seat maps. Two Alembic migrations: initial schema and idempotent venue seed.
+- **ORM and migration layer** — Four tables (`venues`, `performances`, `seat_availabilities`, `reservations`) with indexes, FK cascades, and JSONB columns for price tiers and seat maps. Two Alembic migrations: initial schema and idempotent venue seed.
 - **Seven partner venues seeded** — See venue list below.
 - **Domain models** — `Venue`, `Performance`, `SeatAvailability`, `Reservation` as typed Python dataclasses, decoupled from both the ORM and the CRM layer.
 
@@ -84,7 +84,13 @@ Performing arts is a domain rich in latent preference signals — what patrons b
 
 ## Where this is going
 
-ArtsPass is launching in Seattle's performing arts ecosystem — theater, symphony, opera, and ballet. From there, the expansion path runs in three directions: geographically into additional metro markets, categorically into live music, concerts, comedy, and the broader live entertainment landscape, and competitively as a venue-friendly alternative to ticketing incumbents that extract value from both venues and patrons. We're starting with a focused wedge that's underserved and ready to move — and building infrastructure designed to scale across all three dimensions.
+ArtsPass is launching in Seattle's performing arts ecosystem — theater, symphony, opera, and ballet. From there, the expansion path runs in three directions:
+
+- **Geographically** — into additional metro markets.
+- **Categorically** — into live music, concerts, comedy, and the broader live entertainment landscape.
+- **Competitively** — as a venue-friendly alternative to ticketing incumbents that extract value from both venues and patrons.
+
+We're starting with a focused wedge that's underserved and ready to move — and building infrastructure designed to scale across all three dimensions.
 
 ---
 
