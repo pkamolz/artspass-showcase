@@ -103,10 +103,16 @@ What's here represents the architecture, integration patterns, and design decisi
 
 ## Team
 
-[Co-founder bios to be added]
+We're three Seattle-based product, design, and engineering leaders with shared roots at T-Mobile and a deep personal investment in the live arts and entertainment space.
+
+**Phil Kamolz — Co-founder and CEO.** Phil brings 25+ years building consumer and enterprise products across telecom, eCommerce, and healthcare, including co-leading T-Mobile's eSIM rollout and architecting the digital upgrade path now serving 70% of T-Mobile upgrades. As founder of Elevation Consulting, he has shaped product strategy for Costco, Nordstrom, and other category leaders. A multi-year Seattle Theatre season ticket holder and symphony enthusiast, Phil is the reason ArtsPass exists. Outside of work, he's skiing, surfing, or traveling with his family.
+
+**Martin Chvoj — Co-founder and CPO.** Martin brings 20+ years of product leadership across B2B SaaS, enterprise platforms, and consumer products. At T-Mobile, he led the $550M API Developer program and the company's enhanced scam protection initiative. Most recently as Head of Product at DevBlock Technologies, he has been leading cloud-native and AI software solutions with deep expertise in Generative AI and ML-driven workflow automation. When he's not building products, Martin is in the mountains or at a concert — a Pacific Northwest outdoor enthusiast, skier, and live music fan.
+
+**Jason Luna — Co-founder and Head of Design.** Jason brings 20+ years of design leadership across consumer SaaS, AI tools, and platform products. At Redfin, he led design for the company's consumer AI tools (Ask Redfin) and oversaw the launch of Blueprint, Redfin's design system. At Indy, his work drove a 150% subscription increase on the freelancer SaaS platform. At Genius Sports, he directed a global design team of 30 across six countries. A passionate concertgoer. Also: World Champion Churro Eater, 2001. (Yes, he wants you to read that.)
 
 ---
 
 ArtsPass is in active development in Seattle, with a roadmap that spans cities, categories, and the broader live entertainment market. If you're a venue, an investor, or a patron interested in what we're building, we'd love to talk.
 
-[Contact information to be added]
+Reach out to Phil.Kamolz@ElevationC2.com
