@@ -2,7 +2,9 @@
 
 **A performing arts subscription platform for Seattle — think ClassPass for theater, symphony, opera, and ballet.**
 
-ArtsPass lets patrons buy a monthly pass and use it across Seattle's live arts venues. One subscription, seven venues, no per-show commitment friction. For venues, we turn underutilized inventory into a new acquisition channel and a new patron relationship they wouldn't otherwise own. Seattle's performing arts ecosystem generates over $200M in annual activity, spread across dozens of venues with no shared discovery layer, no flexible access model, and no data infrastructure connecting them. We're building that infrastructure.
+ArtsPass lets patrons buy a monthly pass and use it across Seattle's live arts venues. One subscription, seven venues, no per-show commitment friction. For venues, we turn underutilized inventory into a new acquisition channel and a new patron relationship they wouldn't otherwise own. Today the ecosystem is fragmented across dozens of venues with no shared discovery layer, no flexible access model, and no data infrastructure connecting them. We're building that infrastructure.
+
+We're launching in Seattle's performing arts ecosystem, a market with both established scale and active public investment: King County voters approved a $782 million arts, heritage, and cultural funding levy in December 2023, the largest public commitment to arts and culture in the county's history (King County Doors Open). Nationally, the U.S. nonprofit arts and culture sector is a $151.7 billion industry supporting 2.6 million jobs (Americans for the Arts, Arts & Economic Prosperity 6, 2023). The same adapter-based architecture extends from performing arts into the broader U.S. live entertainment market — live music, concerts, comedy.
 
 ---
 
@@ -52,7 +54,7 @@ FastAPI routes
 
 ---
 
-## Seattle partner venues
+## Seattle-area partner venues
 
 | Venue | CRM | Status |
 |-------|-----|--------|
