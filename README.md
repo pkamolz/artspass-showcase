@@ -36,7 +36,7 @@ FastAPI routes
 ## Current status
 
 ### Live
-- **Spektrix integration** — Full HMAC-SHA1-signed HTTP client against the Spektrix API v3. Validated against 104 live events at Village Theatre (Issaquah). Events, instances, and seat availability map cleanly to our domain models.
+- **Spektrix integration** — Full HMAC-SHA1-signed HTTP client against the Spektrix API v3, validated against 104 events in a sandbox environment modeling Village Theatre's production scenarios. Events, instances, and seat availability map cleanly to our domain models.
 - **ORM and migration layer** — Four tables (`venues`, `performances`, `seat_availabilities`, `reservations`) with indexes, FK cascades, and JSONB columns for price tiers and seat maps. Two Alembic migrations: initial schema and idempotent venue seed.
 - **Seven partner venues seeded** — See venue list below.
 - **Domain models** — `Venue`, `Performance`, `SeatAvailability`, `Reservation` as typed Python dataclasses, decoupled from both the ORM and the CRM layer.
@@ -58,7 +58,7 @@ FastAPI routes
 
 | Venue | CRM | Status |
 |-------|-----|--------|
-| Village Theatre (Issaquah) | Spektrix | Connected |
+| Village Theatre (Issaquah) | Spektrix | Integrating |
 | Seattle Symphony | Tessitura | Pending |
 | Seattle Repertory Theatre | Tessitura | Pending |
 | Seattle Opera | Tessitura | Pending |

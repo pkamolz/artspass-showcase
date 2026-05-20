@@ -35,9 +35,9 @@ The foundation we're building now — domain-typed abstractions, adapter-based C
 
 A few engineering decisions shape why the work is sequenced the way it is.
 
-**Read path before write path.** Reading availability is independently signed, stateless, and safe to retry; writing reservations is a multi-step stateful flow with rollback concerns. Validating the read path against live data first means the write path is built on a foundation we know works — and means we can demonstrate end-to-end inventory visibility before any patron money moves.
+**Read path before write path.** Reading availability is independently signed, stateless, and safe to retry; writing reservations is a multi-step stateful flow with rollback concerns. Validating the read path against realistic sandbox data first means the write path is built on a foundation we know works — and means we can demonstrate end-to-end inventory visibility before any patron money moves.
 
-**Validate against live data, not fixtures.** The 104-event Spektrix validation run used Village Theatre's real production account, not synthetic test data. Mock-only testing hides exactly the failure modes — schema drift, null handling, edge cases in real catalogs — that production exposes. We extend this approach to every new CRM integration.
+**Validate against realistic data, not simplified mock data.** We validated the Spektrix read path against 104 events in a sandbox environment modeling Village Theatre's real production scenarios. Realistic validation surfaces the failure modes that simplified mock data hides: schema variation, null handling, edge cases in real catalogs. Live production integration is the next step, and we expect it may reveal further edge cases — which is exactly why we validate thoroughly before we get there. We extend this approach to every new CRM integration.
 
 **Build the adapter pattern correctly once.** The cost of retrofitting CRM-agnostic abstractions onto a codebase that grew CRM-specific branches is high. We paid the abstraction cost upfront so that every subsequent CRM — Tessitura today, others later — is one module and one registry entry, with no changes to routes or business logic. See [`crm-adapter-pattern.md`](crm-adapter-pattern.md).
 

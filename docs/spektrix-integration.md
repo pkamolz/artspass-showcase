@@ -2,7 +2,7 @@
 
 This document describes how ArtsPass integrates with the Spektrix CRM (API v3). It covers the authentication scheme, our API surface usage, the domain mapping layer, validation results, and current implementation status. It is intended for engineers evaluating the integration in detail.
 
-Spektrix was our first CRM integration for two reasons: its API v3 is a conventional REST interface with well-documented authentication, and Village Theatre (our first connected partner) completed the API access approval process quickly. Tessitura — used by four of our other Seattle partners — has a richer API but a longer credentialing process; its adapter is stubbed and ready once credentials arrive.
+Spektrix was our first CRM integration for two reasons: its API v3 is a conventional REST interface with well-documented authentication, and Village Theatre (our first integration partner) provided sandbox API access through a fast approval process. Tessitura — used by four of our other Seattle partners — has a richer API but a longer credentialing process; its adapter is stubbed and ready once credentials arrive.
 
 ## Authentication: HMAC-SHA1 request signing
 
@@ -94,7 +94,7 @@ Prices arrive as floats from Spektrix (e.g., `45.0`) and are immediately convert
 
 ## Validation: the 104-event run
 
-The 104 events are Village Theatre's actual current season data, not a synthetic test. We validated the integration end-to-end against their live Spektrix production account — including the real-time availability calls that ArtsPass depends on for live inventory.
+The 104 events model Village Theatre's current-season scenarios in a Spektrix sandbox environment — realistic data, not simplified mock data. We validated the integration end-to-end against the sandbox, including the real-time availability calls that ArtsPass depends on for live inventory.
 
 Availability is the harder call: it is time-sensitive, requires a valid `crm_ref` carried forward from the event fetch, and drives whether a patron sees a show as bookable right now. A single call to `GET /events` returned 104 active events; we then called `GET /events/{id}/instances` for each — 105 total API calls — and verified:
 
@@ -102,7 +102,7 @@ Availability is the harder call: it is time-sensitive, requires a valid `crm_ref
 - **Signing reliability** — all 104 signed requests returned HTTP 200; no 401s, confirming the HMAC-SHA1 implementation is correct
 - **Field mapping completeness** — all 104 events mapped to valid `Performance` objects; nullable fields (`endDate`, `description`) handled correctly; `crm_ref` round-tripped as the instance call path parameter
 
-The read path is production-ready.
+The read path is fully implemented and sandbox-validated, ready for live production integration.
 
 ## What's complete and what's in progress
 

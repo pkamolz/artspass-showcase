@@ -174,13 +174,13 @@ Follow the pattern in `tests/test_adapters.py`:
 - **Verify unimplemented methods raise `NotImplementedError`** before the full implementation lands.
 - **Test registry wiring** — `get_adapter("ticketmaster")` should return a `TicketmasterAdapter`.
 
-Live integration tests run against the real CRM API separately and manually, kept out of the standard test suite. This is how the Spektrix integration was validated against 104 live events before the read path was declared production-ready.
+Live integration tests run against the real CRM API separately and manually, kept out of the standard test suite. The Spektrix read path was validated this way against 104 events in a sandbox modeling Village Theatre's production scenarios.
 
 ## Current state
 
 | CRM | Adapter | Status | Venues |
 |-----|---------|--------|--------|
-| Spektrix | SpektrixAdapter | Read side live; write side in progress | Village Theatre (Issaquah) |
+| Spektrix | SpektrixAdapter | Read side sandbox-validated; write side in progress | Village Theatre (Issaquah) |
 | Tessitura | TessituraAdapter | Stub — awaiting API credentials | Seattle Symphony, Seattle Repertory Theatre, Seattle Opera, Pacific Northwest Ballet |
 | TBD | — | Not yet scoped | Seattle Children's Theatre, Union Arts Center |
 
@@ -202,5 +202,5 @@ Each new CRM adds one module and one registry entry — nothing else changes. We
 
 ## Related docs
 
-- [`docs/spektrix-integration.md`](spektrix-integration.md) — the Spektrix adapter as a worked example: HMAC-SHA1 signing, event-to-performance mapping, and the validation run against live data
+- [`docs/spektrix-integration.md`](spektrix-integration.md) — the Spektrix adapter as a worked example: HMAC-SHA1 signing, event-to-performance mapping, and the sandbox validation run against realistic partner scenarios
 - [`docs/architecture.md`](architecture.md) — system-level view showing where the adapter layer fits relative to the API and persistence layers
