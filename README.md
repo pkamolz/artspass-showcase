@@ -1,6 +1,6 @@
 # ArtsPass
 
-**A performing arts subscription platform for Seattle — think ClassPass for theater, symphony, opera, and ballet.**
+**A subscription platform for live arts and entertainment, launching in Seattle — think ClassPass for theater, symphony, opera, and ballet.**
 
 ArtsPass lets patrons buy a monthly pass and use it across Seattle's live arts venues. One subscription, seven venues, no per-show commitment friction. For venues, we turn underutilized inventory into a new acquisition channel and a new patron relationship they wouldn't otherwise own. Today the ecosystem is fragmented across dozens of venues with no shared discovery layer, no flexible access model, and no data infrastructure connecting them. We're building that infrastructure.
 
